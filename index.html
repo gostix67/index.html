@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body style="background:#000; color:#gold; text-align:center;">
+    <h1>CASINO HUB</h1>
+    <button onclick="winGame()">🎰 КРУТИТЬ (Спиcать 100, получить 500)</button>
+    <script>
+        const tg = window.Telegram.WebApp;
+        function winGame() {
+            // Отправляем данные боту (сработал выигрыш)
+            tg.sendData(JSON.stringify({action: "win", amount: 500}));
+            alert("Выигрыш отправлен в бота!");
+        }
+    </script>
+</body>
+</html>
